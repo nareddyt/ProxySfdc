@@ -6,7 +6,8 @@ var _constants = require('./constants');
 var app = express();
 var auth = {
     refresh_token: '',
-    access_token: ''}
+    access_token: ''
+};
 
 app.use(bodyParser.text({type: '*/*'}));
 app.use(myMiddleware);
@@ -27,7 +28,8 @@ function getIngestionUrl(endpoint) {
 
 app.get('/', function (req,res) {
     res.send("Smart Gates")
-})
+});
+
 app.post('/endpoint', function (req, res) {
 
     console.log(req.body);
@@ -59,13 +61,13 @@ app.post('/endpoint', function (req, res) {
         console.log(error);
         res.end();
     });
-})
+});
 
 // Settng up server
 var server = app.listen(_constants.PORT, function () {
 
-    var host = server.address().address
-    var port = server.address().port
+    var host = server.address().address;
+    var port = server.address().port;
     console.log("Forwarding app listening at http://%s:%s", host, port)
 
 });
