@@ -7,4 +7,4 @@ module.exports = {
 	DEFAULT_STREAM: "",
 	DEFAULT_ENDPOINT: "",
 	PORT: 8081
-}
+};

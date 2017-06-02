@@ -1,10 +1,10 @@
-var express = require('express');
-var bodyParser = require('body-parser')
-var request = require('request');
-var _constants = require('./constants');
+let express = require('express');
+let bodyParser = require('body-parser')
+let request = require('request');
+let _constants = require('./constants');
 
-var app = express();
-var auth = {
+let app = express();
+let auth = {
     refresh_token: '',
     access_token: ''
 };
@@ -64,10 +64,10 @@ app.post('/endpoint', function (req, res) {
 });
 
 // Settng up server
-var server = app.listen(_constants.PORT, function () {
+let server = app.listen(_constants.PORT, function () {
 
-    var host = server.address().address;
-    var port = server.address().port;
+    let host = server.address().address;
+    let port = server.address().port;
     console.log("Forwarding app listening at http://%s:%s", host, port)
 
 });
