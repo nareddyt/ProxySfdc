@@ -5,6 +5,6 @@ module.exports = {
 	BASE_URL: "https://corsa04-perfeng2-2015139045.vpod.t.force.com/",
 	TOKEN: process.env.AUTH_TOKEN,
 	DEFAULT_STREAM: "",
-	DEFAULT_ENDPOINT: "",
+	DEFAULT_ENDPOINT: "smartGatesEvent__e",
 	PORT: 8081
 };

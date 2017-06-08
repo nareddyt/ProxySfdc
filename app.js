@@ -99,7 +99,7 @@ app.get('/', function (req,res) {
 
 app.post('/endpoint', function (req, res) {
 
-    console.log(req.body);
+    // console.log(req.body);
     let reqBody;
     let reqJSON;
     let ingestionUrl;
@@ -113,7 +113,7 @@ app.post('/endpoint', function (req, res) {
     } else {
         ingestionUrl = getIngestionUrl(_constants.DEFAULT_ENDPOINT);
     }
-    reqBody = JSON.stringify(req.body.payload);
+    reqBody = JSON.stringify(req.body);
 
     request({
         method: "POST",
@@ -124,7 +124,7 @@ app.post('/endpoint', function (req, res) {
         url: ingestionUrl,
         body: reqBody
     }, function(error, response, body) {
-        console.log(response);
+        // console.log(response);
         console.log(error);
         res.end();
     });
