@@ -94,7 +94,7 @@ function getIngestionUrl(endpoint) {
 }
 
 app.get('/', function (req,res) {
-    res.send("Smart Gates")
+    res.sendfile('home.html');
 });
 
 app.post('/endpoint', function (req, res) {
